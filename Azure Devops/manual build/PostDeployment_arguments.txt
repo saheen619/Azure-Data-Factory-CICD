@@ -1,0 +1,1 @@
+-armTemplate "$(System.DefaultWorkingDirectory)/$(System.DefaultWorkingDirectory)/_dev-cicd-adf-00619/dev-cicd-adf-00619/ARMTemplateForFactory.json" -ResourceGroupName test-cicd-rg -DataFactoryName test-cicd-adf-00619 -predeployment $false -deleteDeployment $true
