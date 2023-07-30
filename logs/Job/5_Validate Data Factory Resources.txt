@@ -1,0 +1,94 @@
+2023-07-27T17:25:03.3130777Z ##[section]Starting: Validate Data Factory Resources
+2023-07-27T17:25:03.3136230Z ==============================================================================
+2023-07-27T17:25:03.3136372Z Task         : npm
+2023-07-27T17:25:03.3136434Z Description  : Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+2023-07-27T17:25:03.3136586Z Version      : 1.221.0
+2023-07-27T17:25:03.3136649Z Author       : Microsoft Corporation
+2023-07-27T17:25:03.3136733Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/package/npm
+2023-07-27T17:25:03.3136824Z ==============================================================================
+2023-07-27T17:25:03.9303272Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm --version
+2023-07-27T17:25:04.0867748Z 6.14.18
+2023-07-27T17:25:04.4677659Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config list
+2023-07-27T17:25:04.6477031Z ; cli configs
+2023-07-27T17:25:04.6477908Z metrics-registry = "https://registry.npmjs.org/"
+2023-07-27T17:25:04.6478450Z scope = ""
+2023-07-27T17:25:04.6478769Z user-agent = "npm/6.14.18 node/v14.21.3 linux x64"
+2023-07-27T17:25:04.6478922Z 
+2023-07-27T17:25:04.6479107Z ; environment configs
+2023-07-27T17:25:04.6479333Z userconfig = "/home/vsts/work/1/npm/8.npmrc"
+2023-07-27T17:25:04.6479491Z 
+2023-07-27T17:25:04.6479704Z ; node bin location = /opt/hostedtoolcache/node/14.21.3/x64/bin/node
+2023-07-27T17:25:04.6479951Z ; cwd = /home/vsts/work/1/s/build
+2023-07-27T17:25:04.6480163Z ; HOME = /home/vsts
+2023-07-27T17:25:04.6480443Z ; "npm config ls -l" to show all defaults.
+2023-07-27T17:25:04.6480587Z 
+2023-07-27T17:25:04.6483346Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm run build validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:08.9998909Z 
+2023-07-27T17:25:09.0000081Z > @ build /home/vsts/work/1/s/build
+2023-07-27T17:25:09.0001226Z > node node_modules/@microsoft/azure-data-factory-utilities/lib/index "validate" "/home/vsts/work/1/s/" "/subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619"
+2023-07-27T17:25:09.0001857Z 
+2023-07-27T17:25:09.0002394Z Downloading bundle from: https://adf.azure.com/assets/cmd-api/main.js
+2023-07-27T17:25:09.0004544Z Process cwd: /home/vsts/work/1/s/build
+2023-07-27T17:25:09.0004877Z Bundle downloaded successfully, saved in: /home/vsts/work/1/s/build/downloads/main.js
+2023-07-27T17:25:09.0005262Z Executing bundle...
+2023-07-27T17:25:09.0005959Z Inserting the following arguments: validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:09.0006389Z Executing bundle file, full command:
+2023-07-27T17:25:09.0006732Z 
+2023-07-27T17:25:09.0007464Z node  /home/vsts/work/1/s/build/downloads/main.js validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 
+2023-07-27T17:25:09.0007837Z 
+2023-07-27T17:25:09.0008019Z 
+2023-07-27T17:25:09.0008371Z [0m CmdApiApp: Initializing application.
+2023-07-27T17:25:09.0009685Z Resource: /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:09.0010144Z RootFolder: /home/vsts/work/1/s/
+2023-07-27T17:25:09.0010970Z [0m ModelService: synchronize - start
+2023-07-27T17:25:09.0011285Z [0m ModelService: Dynamic connector - Start registering dynamic connectors
+2023-07-27T17:25:09.0011631Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Dataworld
+2023-07-27T17:25:09.0012062Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Dataworld
+2023-07-27T17:25:09.0012362Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Asana
+2023-07-27T17:25:09.0013069Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Asana
+2023-07-27T17:25:09.0013383Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Twilio
+2023-07-27T17:25:09.0013694Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Twilio
+2023-07-27T17:25:09.0014012Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: AppFigures
+2023-07-27T17:25:09.0014321Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: AppFigures
+2023-07-27T17:25:09.0014646Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: GoogleSheets
+2023-07-27T17:25:09.0014962Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: GoogleSheets
+2023-07-27T17:25:09.0015220Z [0m CmdApiApp: Initializing resource registries...
+2023-07-27T17:25:09.0015447Z [0m CmdApiApp: Initializing model service...
+2023-07-27T17:25:09.0015705Z [0m ModelService: Dynamic connector - Finished registering dynamic connectors
+2023-07-27T17:25:09.0015985Z [0m BaseFileResourceProviderService: populateAllResources - start
+2023-07-27T17:25:09.0016223Z [0m CmdApiApp: Initializing publish config service...
+2023-07-27T17:25:09.0016499Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:09.0016925Z [0m LocalFileClientService: Unable to list files for: integrationRuntime, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/integrationRuntime'
+2023-07-27T17:25:09.0017405Z [0m LocalFileClientService: Unable to list files for: factory, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/factory'
+2023-07-27T17:25:09.0017845Z [0m LocalFileClientService: Unable to list files for: dataflow, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/dataflow'
+2023-07-27T17:25:09.0018296Z [0m LocalFileClientService: Unable to list files for: credential, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/credential'
+2023-07-27T17:25:09.0018753Z [0m LocalFileClientService: Unable to list files for: adfcdc, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/adfcdc'
+2023-07-27T17:25:09.0019248Z [0m LocalFileClientService: Unable to list files for: managedVirtualNetwork, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/managedVirtualNetwork'
+2023-07-27T17:25:09.0020144Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:09.0021154Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:09.0021774Z [0m CmdApiApp: App initialized.
+2023-07-27T17:25:09.0022057Z [0m BaseFileResourceProviderService: populateAllResources - downloaded git resources
+2023-07-27T17:25:09.0022358Z [0m BaseFileResourceProviderService: populateAllResources - loaded last version id
+2023-07-27T17:25:09.0022652Z [0m BaseFileResourceProviderService: populateAllResources - finished
+2023-07-27T17:25:09.0022882Z [0m ModelService: fetchAllInBackground - start
+2023-07-27T17:25:09.0023085Z [0m ModelService: synchronize - finished
+2023-07-27T17:25:09.0023311Z [0m CmdApiApp: Starting to validate all resources
+2023-07-27T17:25:09.0023604Z [0m ModelService: _backgroundFetch - finished, duration: 108.67980899999384, total nameds: 13
+2023-07-27T17:25:09.0024048Z [0m ModelService: _backgroundFetch - finished, total unknown model types
+2023-07-27T17:25:09.0024328Z [0m Validator: Start validation for: pipeline - pl_copy_population_access_key
+2023-07-27T17:25:09.0024622Z [0m Validator: Start validation for: pipeline - pl_copy_population_data
+2023-07-27T17:25:09.0024873Z [0m Validator: Start validation for: pipeline - pl_pipeline3
+2023-07-27T17:25:09.0025115Z [0m Validator: Start validation for: pipeline - pl_pipeline_1
+2023-07-27T17:25:09.0025398Z [0m Validator: Start validation for: dataset - ds_population_source_access_key
+2023-07-27T17:25:09.0025660Z [0m Validator: Start validation for: dataset - ds_sink_population
+2023-07-27T17:25:09.0025949Z [0m Validator: Start validation for: dataset - ds_sink_population_access_key
+2023-07-27T17:25:09.0026213Z [0m Validator: Start validation for: dataset - ds_source_population
+2023-07-27T17:25:09.0026513Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_accesskey_keyvault
+2023-07-27T17:25:09.0026809Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_managed_identity
+2023-07-27T17:25:09.0027072Z [0m Validator: Start validation for: linkedService - ls_devcicdkv
+2023-07-27T17:25:09.0027341Z [0m Validator: Start validation for: trigger - trigger_1
+2023-07-27T17:25:09.0027516Z [0m CmdApiApp: 
+2023-07-27T17:25:09.0027660Z Validation finished. No errors found.
+2023-07-27T17:25:09.0027730Z 
+2023-07-27T17:25:09.0027834Z Execution finished....
+2023-07-27T17:25:09.0105187Z ##[section]Finishing: Validate Data Factory Resources

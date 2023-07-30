@@ -1,0 +1,34 @@
+2023-07-27T17:24:55.0752799Z ##[section]Starting: Initialize job
+2023-07-27T17:24:55.0755866Z Agent name: 'Hosted Agent'
+2023-07-27T17:24:55.0756214Z Agent machine name: 'fv-az637-418'
+2023-07-27T17:24:55.0756354Z Current agent version: '3.224.1'
+2023-07-27T17:24:55.0790392Z ##[group]Operating System
+2023-07-27T17:24:55.0790579Z Ubuntu
+2023-07-27T17:24:55.0790659Z 22.04.2
+2023-07-27T17:24:55.0790737Z LTS
+2023-07-27T17:24:55.0790837Z ##[endgroup]
+2023-07-27T17:24:55.0790930Z ##[group]Runner Image
+2023-07-27T17:24:55.0791038Z Image: ubuntu-22.04
+2023-07-27T17:24:55.0791141Z Version: 20230724.1.0
+2023-07-27T17:24:55.0791359Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230724.1/images/linux/Ubuntu2204-Readme.md
+2023-07-27T17:24:55.0791636Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230724.1
+2023-07-27T17:24:55.0791821Z ##[endgroup]
+2023-07-27T17:24:55.0791938Z ##[group]Runner Image Provisioner
+2023-07-27T17:24:55.0792211Z 2.0.238.1
+2023-07-27T17:24:55.0792294Z ##[endgroup]
+2023-07-27T17:24:55.0793110Z Current image version: '20230724.1.0'
+2023-07-27T17:24:55.0794399Z Agent running as: 'vsts'
+2023-07-27T17:24:55.0831480Z Prepare build directory.
+2023-07-27T17:24:55.1100682Z Set build variables.
+2023-07-27T17:24:55.1132300Z Download all required tasks.
+2023-07-27T17:24:55.1280842Z Downloading task: NodeTool (0.225.0)
+2023-07-27T17:24:55.5876735Z Downloading task: Npm (1.221.0)
+2023-07-27T17:24:56.3079722Z Downloading task: PublishPipelineArtifact (1.199.0)
+2023-07-27T17:24:56.3623011Z Checking job knob settings.
+2023-07-27T17:24:56.3633541Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2023-07-27T17:24:56.3634143Z    Knob: AgentToolsDirectory = /opt/hostedtoolcache Source: ${AGENT_TOOLSDIRECTORY} 
+2023-07-27T17:24:56.3635338Z    Knob: AgentPerflog = /home/vsts/perflog Source: ${VSTS_AGENT_PERFLOG} 
+2023-07-27T17:24:56.3637155Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2023-07-27T17:24:56.3637890Z Finished checking job knob settings.
+2023-07-27T17:24:56.3951485Z Start tracking orphan processes.
+2023-07-27T17:24:56.4112097Z ##[section]Finishing: Initialize job

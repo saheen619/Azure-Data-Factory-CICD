@@ -1,0 +1,10 @@
+{
+	"name": "ls_devcicdkv",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://devcicdkv.vault.azure.net/"
+		}
+	}
+}

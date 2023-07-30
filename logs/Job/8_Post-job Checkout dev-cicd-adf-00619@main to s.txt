@@ -1,0 +1,10 @@
+2023-07-27T17:25:18.2198699Z ##[section]Starting: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:25:18.2201387Z ==============================================================================
+2023-07-27T17:25:18.2201510Z Task         : Get sources
+2023-07-27T17:25:18.2201579Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2023-07-27T17:25:18.2201681Z Version      : 1.0.0
+2023-07-27T17:25:18.2201733Z Author       : Microsoft
+2023-07-27T17:25:18.2201812Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2023-07-27T17:25:18.2201903Z ==============================================================================
+2023-07-27T17:25:18.5318241Z Cleaning any cached credential from repository: dev-cicd-adf-00619 (Git)
+2023-07-27T17:25:18.5423545Z ##[section]Finishing: Checkout dev-cicd-adf-00619@main to s

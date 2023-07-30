@@ -1,0 +1,491 @@
+2023-07-27T17:24:54.8951739Z ##[section]Starting: Job
+2023-07-27T17:24:55.0752842Z ##[section]Starting: Initialize job
+2023-07-27T17:24:55.0755895Z Agent name: 'Hosted Agent'
+2023-07-27T17:24:55.0756219Z Agent machine name: 'fv-az637-418'
+2023-07-27T17:24:55.0756358Z Current agent version: '3.224.1'
+2023-07-27T17:24:55.0790421Z ##[group]Operating System
+2023-07-27T17:24:55.0790583Z Ubuntu
+2023-07-27T17:24:55.0790662Z 22.04.2
+2023-07-27T17:24:55.0790740Z LTS
+2023-07-27T17:24:55.0790841Z ##[endgroup]
+2023-07-27T17:24:55.0790934Z ##[group]Runner Image
+2023-07-27T17:24:55.0791041Z Image: ubuntu-22.04
+2023-07-27T17:24:55.0791145Z Version: 20230724.1.0
+2023-07-27T17:24:55.0791363Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20230724.1/images/linux/Ubuntu2204-Readme.md
+2023-07-27T17:24:55.0791639Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20230724.1
+2023-07-27T17:24:55.0791825Z ##[endgroup]
+2023-07-27T17:24:55.0791942Z ##[group]Runner Image Provisioner
+2023-07-27T17:24:55.0792216Z 2.0.238.1
+2023-07-27T17:24:55.0792319Z ##[endgroup]
+2023-07-27T17:24:55.0793118Z Current image version: '20230724.1.0'
+2023-07-27T17:24:55.0794407Z Agent running as: 'vsts'
+2023-07-27T17:24:55.0831502Z Prepare build directory.
+2023-07-27T17:24:55.1100712Z Set build variables.
+2023-07-27T17:24:55.1132328Z Download all required tasks.
+2023-07-27T17:24:55.1280855Z Downloading task: NodeTool (0.225.0)
+2023-07-27T17:24:55.5876753Z Downloading task: Npm (1.221.0)
+2023-07-27T17:24:56.3079744Z Downloading task: PublishPipelineArtifact (1.199.0)
+2023-07-27T17:24:56.3623042Z Checking job knob settings.
+2023-07-27T17:24:56.3633562Z    Knob: DockerActionRetries = true Source: $(VSTSAGENT_DOCKER_ACTION_RETRIES) 
+2023-07-27T17:24:56.3634150Z    Knob: AgentToolsDirectory = /opt/hostedtoolcache Source: ${AGENT_TOOLSDIRECTORY} 
+2023-07-27T17:24:56.3635345Z    Knob: AgentPerflog = /home/vsts/perflog Source: ${VSTS_AGENT_PERFLOG} 
+2023-07-27T17:24:56.3637177Z    Knob: ContinueAfterCancelProcessTreeKillAttempt = true Source: $(VSTSAGENT_CONTINUE_AFTER_CANCEL_PROCESSTREEKILL_ATTEMPT) 
+2023-07-27T17:24:56.3637894Z Finished checking job knob settings.
+2023-07-27T17:24:56.3951510Z Start tracking orphan processes.
+2023-07-27T17:24:56.4112116Z ##[section]Finishing: Initialize job
+2023-07-27T17:24:56.4299288Z ##[section]Async Command Start: DetectDockerContainer
+2023-07-27T17:24:56.4299568Z ##[section]Async Command End: DetectDockerContainer
+2023-07-27T17:24:56.4300184Z ##[section]Async Command Start: DetectDockerContainer
+2023-07-27T17:24:56.4300423Z ##[section]Async Command End: DetectDockerContainer
+2023-07-27T17:24:56.4478985Z ##[section]Starting: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:24:56.4687666Z ==============================================================================
+2023-07-27T17:24:56.4688255Z Task         : Get sources
+2023-07-27T17:24:56.4688505Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2023-07-27T17:24:56.4688671Z Version      : 1.0.0
+2023-07-27T17:24:56.4688904Z Author       : Microsoft
+2023-07-27T17:24:56.4689240Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2023-07-27T17:24:56.4689367Z ==============================================================================
+2023-07-27T17:24:56.9753670Z Syncing repository: dev-cicd-adf-00619 (Git)
+2023-07-27T17:24:57.0264165Z ##[command]git version
+2023-07-27T17:24:57.0962726Z git version 2.41.0
+2023-07-27T17:24:57.0987479Z ##[command]git lfs version
+2023-07-27T17:24:57.1519232Z git-lfs/3.3.0 (GitHub; linux amd64; go 1.19.3)
+2023-07-27T17:24:57.1699659Z ##[command]git init "/home/vsts/work/1/s"
+2023-07-27T17:24:57.1774027Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-27T17:24:57.1774319Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-27T17:24:57.1774601Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-27T17:24:57.1774750Z hint: 
+2023-07-27T17:24:57.1774971Z hint: 	git config --global init.defaultBranch <name>
+2023-07-27T17:24:57.1775424Z hint: 
+2023-07-27T17:24:57.1775661Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-27T17:24:57.1775971Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-27T17:24:57.1776124Z hint: 
+2023-07-27T17:24:57.1776284Z hint: 	git branch -m <name>
+2023-07-27T17:24:57.1793221Z Initialized empty Git repository in /home/vsts/work/1/s/.git/
+2023-07-27T17:24:57.1811173Z ##[command]git remote add origin https://saheendecathlon@dev.azure.com/saheendecathlon/Azure%AZP2520Data%AZP2520Factory%AZP2520CI%AZP2520CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.1874436Z ##[command]git config gc.auto 0
+2023-07-27T17:24:57.1917436Z ##[command]git config --get-all http.https://saheendecathlon@dev.azure.com/saheendecathlon/Azure%AZP2520Data%AZP2520Factory%AZP2520CI%AZP2520CD/_git/dev-cicd-adf-00619.extraheader
+2023-07-27T17:24:57.1960341Z ##[command]git config --get-all http.extraheader
+2023-07-27T17:24:57.2045578Z ##[command]git config --get-regexp .*extraheader
+2023-07-27T17:24:57.2049529Z ##[command]git config --get-all http.proxy
+2023-07-27T17:24:57.2074468Z ##[command]git config http.version HTTP/1.1
+2023-07-27T17:24:57.2248754Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +1e5b8757aea590a4e018306e93e5aca0d8cf25c3:refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.4025085Z remote: Azure Repos        
+2023-07-27T17:24:57.4036523Z remote: 
+2023-07-27T17:24:57.4042828Z remote: Found 26 objects to send. (0 ms)        
+2023-07-27T17:24:57.4137481Z From https://dev.azure.com/saheendecathlon/Azure%20Data%20Factory%20CI%20CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.4141549Z  * [new ref]         1e5b8757aea590a4e018306e93e5aca0d8cf25c3 -> origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.4720933Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.6016704Z remote: Azure Repos        
+2023-07-27T17:24:57.6017223Z remote: 
+2023-07-27T17:24:57.6029266Z remote: Found 0 objects to send. (0 ms)        
+2023-07-27T17:24:57.6118026Z From https://dev.azure.com/saheendecathlon/Azure%20Data%20Factory%20CI%20CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.6120600Z  * branch            1e5b8757aea590a4e018306e93e5aca0d8cf25c3 -> FETCH_HEAD
+2023-07-27T17:24:57.6646925Z ##[command]git checkout --progress --force refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.6650649Z Note: switching to 'refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3'.
+2023-07-27T17:24:57.6650765Z 
+2023-07-27T17:24:57.6651117Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-27T17:24:57.6651335Z changes and commit them, and you can discard any commits you make in this
+2023-07-27T17:24:57.6651552Z state without impacting any branches by switching back to a branch.
+2023-07-27T17:24:57.6651640Z 
+2023-07-27T17:24:57.6651800Z If you want to create a new branch to retain commits you create, you may
+2023-07-27T17:24:57.6652065Z do so (now or later) by using -c with the switch command. Example:
+2023-07-27T17:24:57.6652151Z 
+2023-07-27T17:24:57.6652331Z   git switch -c <new-branch-name>
+2023-07-27T17:24:57.6652395Z 
+2023-07-27T17:24:57.6652510Z Or undo this operation with:
+2023-07-27T17:24:57.6652571Z 
+2023-07-27T17:24:57.6652690Z   git switch -
+2023-07-27T17:24:57.6652740Z 
+2023-07-27T17:24:57.6652898Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-27T17:24:57.6652992Z 
+2023-07-27T17:24:57.6653167Z HEAD is now at 1e5b875 Merged PR 16: Updating pipeline: pl_copy_population_access_key
+2023-07-27T17:24:57.6707363Z ##[section]Finishing: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:24:57.6723667Z ##[section]Starting: Install Node.js
+2023-07-27T17:24:57.6728661Z ==============================================================================
+2023-07-27T17:24:57.6728785Z Task         : Node.js tool installer
+2023-07-27T17:24:57.6728851Z Description  : Finds or downloads and caches the specified version spec of Node.js and adds it to the PATH
+2023-07-27T17:24:57.6728965Z Version      : 0.225.0
+2023-07-27T17:24:57.6729037Z Author       : Microsoft Corporation
+2023-07-27T17:24:57.6729103Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/tool/node-js
+2023-07-27T17:24:57.6729197Z ==============================================================================
+2023-07-27T17:24:58.0457966Z Found tool in cache: node 14.21.3 x64
+2023-07-27T17:24:58.0462297Z Prepending PATH environment variable with directory: /opt/hostedtoolcache/node/14.21.3/x64/bin
+2023-07-27T17:24:58.1107053Z ##[section]Finishing: Install Node.js
+2023-07-27T17:24:58.1119577Z ##[section]Starting: Install npm packages
+2023-07-27T17:24:58.1124595Z ==============================================================================
+2023-07-27T17:24:58.1124744Z Task         : npm
+2023-07-27T17:24:58.1124795Z Description  : Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+2023-07-27T17:24:58.1124938Z Version      : 1.221.0
+2023-07-27T17:24:58.1124993Z Author       : Microsoft Corporation
+2023-07-27T17:24:58.1125074Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/package/npm
+2023-07-27T17:24:58.1125170Z ==============================================================================
+2023-07-27T17:24:58.7251636Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm --version
+2023-07-27T17:24:59.0625618Z 6.14.18
+2023-07-27T17:24:59.4797256Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config list
+2023-07-27T17:24:59.6548938Z npm info it worked if it ends with ok
+2023-07-27T17:24:59.6549558Z npm verb cli [
+2023-07-27T17:24:59.6550204Z npm verb cli   '/opt/hostedtoolcache/node/14.21.3/x64/bin/node',
+2023-07-27T17:24:59.6550645Z npm verb cli   '/opt/hostedtoolcache/node/14.21.3/x64/bin/npm',
+2023-07-27T17:24:59.6551177Z npm verb cli   'config',
+2023-07-27T17:24:59.6554320Z npm verb cli   'list'
+2023-07-27T17:24:59.6554601Z npm verb cli ]
+2023-07-27T17:24:59.6554813Z npm info using npm@6.14.18
+2023-07-27T17:24:59.6555280Z npm info using node@v14.21.3
+2023-07-27T17:24:59.6555692Z npm verb exit [ 0, true ]
+2023-07-27T17:24:59.6555952Z npm timing npm Completed in 32ms
+2023-07-27T17:24:59.6556245Z npm info ok 
+2023-07-27T17:24:59.6570728Z ; cli configs
+2023-07-27T17:24:59.6571727Z metrics-registry = "https://registry.npmjs.org/"
+2023-07-27T17:24:59.6572250Z scope = ""
+2023-07-27T17:24:59.6572865Z user-agent = "npm/6.14.18 node/v14.21.3 linux x64"
+2023-07-27T17:24:59.6573047Z 
+2023-07-27T17:24:59.6573161Z ; environment configs
+2023-07-27T17:24:59.6573291Z loglevel = "verbose"
+2023-07-27T17:24:59.6573442Z userconfig = "/home/vsts/work/1/npm/8.npmrc"
+2023-07-27T17:24:59.6573521Z 
+2023-07-27T17:24:59.6573662Z ; node bin location = /opt/hostedtoolcache/node/14.21.3/x64/bin/node
+2023-07-27T17:24:59.6573833Z ; cwd = /home/vsts/work/1/s/build
+2023-07-27T17:24:59.6573956Z ; HOME = /home/vsts
+2023-07-27T17:24:59.6574160Z ; "npm config ls -l" to show all defaults.
+2023-07-27T17:24:59.6574227Z 
+2023-07-27T17:24:59.6575290Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm install
+2023-07-27T17:25:03.2983089Z added 2 packages from 1 contributor and audited 2 packages in 3.157s
+2023-07-27T17:25:03.2983919Z found 0 vulnerabilities
+2023-07-27T17:25:03.2984067Z 
+2023-07-27T17:25:03.2995616Z npm info it worked if it ends with ok
+2023-07-27T17:25:03.2995854Z npm verb cli [
+2023-07-27T17:25:03.2996461Z npm verb cli   '/opt/hostedtoolcache/node/14.21.3/x64/bin/node',
+2023-07-27T17:25:03.2996807Z npm verb cli   '/opt/hostedtoolcache/node/14.21.3/x64/bin/npm',
+2023-07-27T17:25:03.2997120Z npm verb cli   'install'
+2023-07-27T17:25:03.2997324Z npm verb cli ]
+2023-07-27T17:25:03.2997520Z npm info using npm@6.14.18
+2023-07-27T17:25:03.2998368Z npm info using node@v14.21.3
+2023-07-27T17:25:03.2998664Z npm verb npm-session 2ff918ce4da5d100
+2023-07-27T17:25:03.2998913Z npm info lifecycle @~preinstall: @
+2023-07-27T17:25:03.2999171Z npm timing stage:loadCurrentTree Completed in 7ms
+2023-07-27T17:25:03.2999498Z npm timing stage:loadIdealTree:cloneCurrentTree Completed in 0ms
+2023-07-27T17:25:03.2999789Z npm timing stage:loadIdealTree:loadShrinkwrap Completed in 2ms
+2023-07-27T17:25:03.3000222Z npm http fetch GET 200 https://registry.npmjs.org/@microsoft%2fazure-data-factory-utilities 1603ms
+2023-07-27T17:25:03.3000726Z npm http fetch GET 200 https://registry.npmjs.org/@microsoft/azure-data-factory-utilities/-/azure-data-factory-utilities-1.0.1.tgz 1136ms
+2023-07-27T17:25:03.3001064Z npm http fetch GET 200 https://registry.npmjs.org/commander 31ms
+2023-07-27T17:25:03.3001613Z npm http fetch GET 200 https://registry.npmjs.org/commander/-/commander-6.2.0.tgz 39ms
+2023-07-27T17:25:03.3001957Z npm timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 2841ms
+2023-07-27T17:25:03.3002244Z npm timing stage:loadIdealTree Completed in 2844ms
+2023-07-27T17:25:03.3002518Z npm timing stage:generateActionsToTake Completed in 3ms
+2023-07-27T17:25:03.3002801Z npm verb correctMkdir /home/vsts/.npm/_locks correctMkdir not in flight; initializing
+2023-07-27T17:25:03.3003267Z npm verb lock using /home/vsts/.npm/_locks/staging-e0c928f3c089f38a.lock for /home/vsts/work/1/s/build/node_modules/.staging
+2023-07-27T17:25:03.3003589Z npm timing action:extract Completed in 26ms
+2023-07-27T17:25:03.3003835Z npm timing action:finalize Completed in 3ms
+2023-07-27T17:25:03.3004182Z npm timing action:refresh-package-json Completed in 11ms
+2023-07-27T17:25:03.3004453Z npm info lifecycle commander@6.2.0~preinstall: commander@6.2.0
+2023-07-27T17:25:03.3004913Z npm info lifecycle @microsoft/azure-data-factory-utilities@1.0.1~preinstall: @microsoft/azure-data-factory-utilities@1.0.1
+2023-07-27T17:25:03.3005220Z npm timing action:preinstall Completed in 1ms
+2023-07-27T17:25:03.3005475Z npm info linkStuff commander@6.2.0
+2023-07-27T17:25:03.3005803Z npm info linkStuff @microsoft/azure-data-factory-utilities@1.0.1
+2023-07-27T17:25:03.3006074Z npm timing action:build Completed in 2ms
+2023-07-27T17:25:03.3006325Z npm info lifecycle commander@6.2.0~install: commander@6.2.0
+2023-07-27T17:25:03.3006772Z npm info lifecycle @microsoft/azure-data-factory-utilities@1.0.1~install: @microsoft/azure-data-factory-utilities@1.0.1
+2023-07-27T17:25:03.3007072Z npm timing action:install Completed in 0ms
+2023-07-27T17:25:03.3007341Z npm info lifecycle commander@6.2.0~postinstall: commander@6.2.0
+2023-07-27T17:25:03.3007780Z npm info lifecycle @microsoft/azure-data-factory-utilities@1.0.1~postinstall: @microsoft/azure-data-factory-utilities@1.0.1
+2023-07-27T17:25:03.3008099Z npm timing action:postinstall Completed in 0ms
+2023-07-27T17:25:03.3008570Z npm verb unlock done using /home/vsts/.npm/_locks/staging-e0c928f3c089f38a.lock for /home/vsts/work/1/s/build/node_modules/.staging
+2023-07-27T17:25:03.3008899Z npm timing stage:executeActions Completed in 53ms
+2023-07-27T17:25:03.3009161Z npm timing stage:rollbackFailedOptional Completed in 0ms
+2023-07-27T17:25:03.3009398Z npm info linkStuff !invalid#1
+2023-07-27T17:25:03.3009641Z npm info lifecycle undefined~install: undefined
+2023-07-27T17:25:03.3009885Z npm info lifecycle undefined~postinstall: undefined
+2023-07-27T17:25:03.3010143Z npm info lifecycle undefined~prepublish: undefined
+2023-07-27T17:25:03.3010386Z npm info lifecycle undefined~prepare: undefined
+2023-07-27T17:25:03.3010654Z npm timing stage:runTopLevelLifecycles Completed in 2953ms
+2023-07-27T17:25:03.3010885Z npm verb saving []
+2023-07-27T17:25:03.3011124Z npm info lifecycle !invalid#2~preshrinkwrap: !invalid#2
+2023-07-27T17:25:03.3011374Z npm info lifecycle !invalid#2~shrinkwrap: !invalid#2
+2023-07-27T17:25:03.3011756Z npm notice created a lockfile as package-lock.json. You should commit this file.
+2023-07-27T17:25:03.3012034Z npm info lifecycle !invalid#2~postshrinkwrap: !invalid#2
+2023-07-27T17:25:03.3012363Z npm WARN build No repository field.
+2023-07-27T17:25:03.3012579Z npm WARN build No license field.
+2023-07-27T17:25:03.3012720Z 
+2023-07-27T17:25:03.3012934Z npm timing audit submit Completed in 254ms
+2023-07-27T17:25:03.3013301Z npm http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/audits/quick 255ms
+2023-07-27T17:25:03.3013581Z npm timing audit body Completed in 0ms
+2023-07-27T17:25:03.3013793Z npm verb exit [ 0, true ]
+2023-07-27T17:25:03.3014003Z npm timing npm Completed in 3485ms
+2023-07-27T17:25:03.3014231Z npm info ok 
+2023-07-27T17:25:03.3115975Z ##[section]Finishing: Install npm packages
+2023-07-27T17:25:03.3130787Z ##[section]Starting: Validate Data Factory Resources
+2023-07-27T17:25:03.3136241Z ==============================================================================
+2023-07-27T17:25:03.3136376Z Task         : npm
+2023-07-27T17:25:03.3136438Z Description  : Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+2023-07-27T17:25:03.3136589Z Version      : 1.221.0
+2023-07-27T17:25:03.3136653Z Author       : Microsoft Corporation
+2023-07-27T17:25:03.3136736Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/package/npm
+2023-07-27T17:25:03.3136826Z ==============================================================================
+2023-07-27T17:25:03.9303308Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm --version
+2023-07-27T17:25:04.0867809Z 6.14.18
+2023-07-27T17:25:04.4677704Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config list
+2023-07-27T17:25:04.6477096Z ; cli configs
+2023-07-27T17:25:04.6478211Z metrics-registry = "https://registry.npmjs.org/"
+2023-07-27T17:25:04.6478453Z scope = ""
+2023-07-27T17:25:04.6478774Z user-agent = "npm/6.14.18 node/v14.21.3 linux x64"
+2023-07-27T17:25:04.6478926Z 
+2023-07-27T17:25:04.6479110Z ; environment configs
+2023-07-27T17:25:04.6479337Z userconfig = "/home/vsts/work/1/npm/8.npmrc"
+2023-07-27T17:25:04.6479495Z 
+2023-07-27T17:25:04.6479709Z ; node bin location = /opt/hostedtoolcache/node/14.21.3/x64/bin/node
+2023-07-27T17:25:04.6479955Z ; cwd = /home/vsts/work/1/s/build
+2023-07-27T17:25:04.6480166Z ; HOME = /home/vsts
+2023-07-27T17:25:04.6480448Z ; "npm config ls -l" to show all defaults.
+2023-07-27T17:25:04.6480590Z 
+2023-07-27T17:25:04.6483366Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm run build validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:08.9998974Z 
+2023-07-27T17:25:09.0000119Z > @ build /home/vsts/work/1/s/build
+2023-07-27T17:25:09.0001288Z > node node_modules/@microsoft/azure-data-factory-utilities/lib/index "validate" "/home/vsts/work/1/s/" "/subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619"
+2023-07-27T17:25:09.0001862Z 
+2023-07-27T17:25:09.0002400Z Downloading bundle from: https://adf.azure.com/assets/cmd-api/main.js
+2023-07-27T17:25:09.0004548Z Process cwd: /home/vsts/work/1/s/build
+2023-07-27T17:25:09.0004882Z Bundle downloaded successfully, saved in: /home/vsts/work/1/s/build/downloads/main.js
+2023-07-27T17:25:09.0005265Z Executing bundle...
+2023-07-27T17:25:09.0005965Z Inserting the following arguments: validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:09.0006393Z Executing bundle file, full command:
+2023-07-27T17:25:09.0006737Z 
+2023-07-27T17:25:09.0007475Z node  /home/vsts/work/1/s/build/downloads/main.js validate /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 
+2023-07-27T17:25:09.0007839Z 
+2023-07-27T17:25:09.0008022Z 
+2023-07-27T17:25:09.0008375Z [0m CmdApiApp: Initializing application.
+2023-07-27T17:25:09.0009692Z Resource: /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:09.0010149Z RootFolder: /home/vsts/work/1/s/
+2023-07-27T17:25:09.0011003Z [0m ModelService: synchronize - start
+2023-07-27T17:25:09.0011334Z [0m ModelService: Dynamic connector - Start registering dynamic connectors
+2023-07-27T17:25:09.0011635Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Dataworld
+2023-07-27T17:25:09.0012065Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Dataworld
+2023-07-27T17:25:09.0012757Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Asana
+2023-07-27T17:25:09.0013073Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Asana
+2023-07-27T17:25:09.0013387Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Twilio
+2023-07-27T17:25:09.0013697Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Twilio
+2023-07-27T17:25:09.0014016Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: AppFigures
+2023-07-27T17:25:09.0014325Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: AppFigures
+2023-07-27T17:25:09.0014650Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: GoogleSheets
+2023-07-27T17:25:09.0014968Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: GoogleSheets
+2023-07-27T17:25:09.0015239Z [0m CmdApiApp: Initializing resource registries...
+2023-07-27T17:25:09.0015454Z [0m CmdApiApp: Initializing model service...
+2023-07-27T17:25:09.0015709Z [0m ModelService: Dynamic connector - Finished registering dynamic connectors
+2023-07-27T17:25:09.0015989Z [0m BaseFileResourceProviderService: populateAllResources - start
+2023-07-27T17:25:09.0016226Z [0m CmdApiApp: Initializing publish config service...
+2023-07-27T17:25:09.0016504Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:09.0016929Z [0m LocalFileClientService: Unable to list files for: integrationRuntime, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/integrationRuntime'
+2023-07-27T17:25:09.0017410Z [0m LocalFileClientService: Unable to list files for: factory, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/factory'
+2023-07-27T17:25:09.0017848Z [0m LocalFileClientService: Unable to list files for: dataflow, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/dataflow'
+2023-07-27T17:25:09.0018316Z [0m LocalFileClientService: Unable to list files for: credential, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/credential'
+2023-07-27T17:25:09.0018757Z [0m LocalFileClientService: Unable to list files for: adfcdc, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/adfcdc'
+2023-07-27T17:25:09.0019268Z [0m LocalFileClientService: Unable to list files for: managedVirtualNetwork, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/managedVirtualNetwork'
+2023-07-27T17:25:09.0020150Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:09.0021170Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:09.0021778Z [0m CmdApiApp: App initialized.
+2023-07-27T17:25:09.0022061Z [0m BaseFileResourceProviderService: populateAllResources - downloaded git resources
+2023-07-27T17:25:09.0022362Z [0m BaseFileResourceProviderService: populateAllResources - loaded last version id
+2023-07-27T17:25:09.0022656Z [0m BaseFileResourceProviderService: populateAllResources - finished
+2023-07-27T17:25:09.0022886Z [0m ModelService: fetchAllInBackground - start
+2023-07-27T17:25:09.0023089Z [0m ModelService: synchronize - finished
+2023-07-27T17:25:09.0023315Z [0m CmdApiApp: Starting to validate all resources
+2023-07-27T17:25:09.0023741Z [0m ModelService: _backgroundFetch - finished, duration: 108.67980899999384, total nameds: 13
+2023-07-27T17:25:09.0024052Z [0m ModelService: _backgroundFetch - finished, total unknown model types
+2023-07-27T17:25:09.0024332Z [0m Validator: Start validation for: pipeline - pl_copy_population_access_key
+2023-07-27T17:25:09.0024626Z [0m Validator: Start validation for: pipeline - pl_copy_population_data
+2023-07-27T17:25:09.0024878Z [0m Validator: Start validation for: pipeline - pl_pipeline3
+2023-07-27T17:25:09.0025119Z [0m Validator: Start validation for: pipeline - pl_pipeline_1
+2023-07-27T17:25:09.0025402Z [0m Validator: Start validation for: dataset - ds_population_source_access_key
+2023-07-27T17:25:09.0025663Z [0m Validator: Start validation for: dataset - ds_sink_population
+2023-07-27T17:25:09.0025953Z [0m Validator: Start validation for: dataset - ds_sink_population_access_key
+2023-07-27T17:25:09.0026217Z [0m Validator: Start validation for: dataset - ds_source_population
+2023-07-27T17:25:09.0026521Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_accesskey_keyvault
+2023-07-27T17:25:09.0026813Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_managed_identity
+2023-07-27T17:25:09.0027079Z [0m Validator: Start validation for: linkedService - ls_devcicdkv
+2023-07-27T17:25:09.0027345Z [0m Validator: Start validation for: trigger - trigger_1
+2023-07-27T17:25:09.0027520Z [0m CmdApiApp: 
+2023-07-27T17:25:09.0027663Z Validation finished. No errors found.
+2023-07-27T17:25:09.0027734Z 
+2023-07-27T17:25:09.0027838Z Execution finished....
+2023-07-27T17:25:09.0105205Z ##[section]Finishing: Validate Data Factory Resources
+2023-07-27T17:25:09.0116511Z ##[section]Starting: Generate ARM template
+2023-07-27T17:25:09.0120804Z ==============================================================================
+2023-07-27T17:25:09.0120926Z Task         : npm
+2023-07-27T17:25:09.0120976Z Description  : Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+2023-07-27T17:25:09.0121125Z Version      : 1.221.0
+2023-07-27T17:25:09.0121179Z Author       : Microsoft Corporation
+2023-07-27T17:25:09.0121254Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/package/npm
+2023-07-27T17:25:09.0121345Z ==============================================================================
+2023-07-27T17:25:09.5645305Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm --version
+2023-07-27T17:25:09.7315936Z 6.14.18
+2023-07-27T17:25:10.1002185Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config list
+2023-07-27T17:25:10.2789376Z ; cli configs
+2023-07-27T17:25:10.2790329Z metrics-registry = "https://registry.npmjs.org/"
+2023-07-27T17:25:10.2790746Z scope = ""
+2023-07-27T17:25:10.2791938Z user-agent = "npm/6.14.18 node/v14.21.3 linux x64"
+2023-07-27T17:25:10.2792171Z 
+2023-07-27T17:25:10.2792573Z ; environment configs
+2023-07-27T17:25:10.2792904Z userconfig = "/home/vsts/work/1/npm/8.npmrc"
+2023-07-27T17:25:10.2793285Z 
+2023-07-27T17:25:10.2793695Z ; node bin location = /opt/hostedtoolcache/node/14.21.3/x64/bin/node
+2023-07-27T17:25:10.2794054Z ; cwd = /home/vsts/work/1/s/build
+2023-07-27T17:25:10.2794306Z ; HOME = /home/vsts
+2023-07-27T17:25:10.2794676Z ; "npm config ls -l" to show all defaults.
+2023-07-27T17:25:10.2794914Z 
+2023-07-27T17:25:10.2800756Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm run build export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate
+2023-07-27T17:25:14.7187555Z 
+2023-07-27T17:25:14.7188444Z > @ build /home/vsts/work/1/s/build
+2023-07-27T17:25:14.7189424Z > node node_modules/@microsoft/azure-data-factory-utilities/lib/index "export" "/home/vsts/work/1/s/" "/subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619" "ArmTemplate"
+2023-07-27T17:25:14.7189880Z 
+2023-07-27T17:25:14.7190266Z Downloading bundle from: https://adf.azure.com/assets/cmd-api/main.js
+2023-07-27T17:25:14.7190749Z Process cwd: /home/vsts/work/1/s/build
+2023-07-27T17:25:14.7192405Z Bundle downloaded successfully, saved in: /home/vsts/work/1/s/build/downloads/main.js
+2023-07-27T17:25:14.7192689Z Executing bundle...
+2023-07-27T17:25:14.7193272Z Inserting the following arguments: export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate
+2023-07-27T17:25:14.7193640Z Executing bundle file, full command:
+2023-07-27T17:25:14.7193782Z 
+2023-07-27T17:25:14.7247510Z node  /home/vsts/work/1/s/build/downloads/main.js export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate 
+2023-07-27T17:25:14.7247768Z 
+2023-07-27T17:25:14.7247807Z 
+2023-07-27T17:25:14.7248002Z [0m CmdApiApp: Initializing application.
+2023-07-27T17:25:14.7248391Z Resource: /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:14.7248624Z RootFolder: /home/vsts/work/1/s/
+2023-07-27T17:25:14.7248810Z [0m ModelService: synchronize - start
+2023-07-27T17:25:14.7249081Z [0m ModelService: Dynamic connector - Start registering dynamic connectors
+2023-07-27T17:25:14.7249378Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Dataworld
+2023-07-27T17:25:14.7250403Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Dataworld
+2023-07-27T17:25:14.7250737Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Asana
+2023-07-27T17:25:14.7251035Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Asana
+2023-07-27T17:25:14.7251348Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Twilio
+2023-07-27T17:25:14.7251645Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Twilio
+2023-07-27T17:25:14.7251962Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: AppFigures
+2023-07-27T17:25:14.7252272Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: AppFigures
+2023-07-27T17:25:14.7252590Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: GoogleSheets
+2023-07-27T17:25:14.7252921Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: GoogleSheets
+2023-07-27T17:25:14.7253177Z [0m CmdApiApp: Initializing resource registries...
+2023-07-27T17:25:14.7253402Z [0m CmdApiApp: Initializing model service...
+2023-07-27T17:25:14.7253657Z [0m ModelService: Dynamic connector - Finished registering dynamic connectors
+2023-07-27T17:25:14.7253934Z [0m BaseFileResourceProviderService: populateAllResources - start
+2023-07-27T17:25:14.7254173Z [0m CmdApiApp: Initializing publish config service...
+2023-07-27T17:25:14.7254436Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:14.7254871Z [0m LocalFileClientService: Unable to list files for: integrationRuntime, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/integrationRuntime'
+2023-07-27T17:25:14.7255499Z [0m LocalFileClientService: Unable to list files for: factory, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/factory'
+2023-07-27T17:25:14.7255948Z [0m LocalFileClientService: Unable to list files for: dataflow, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/dataflow'
+2023-07-27T17:25:14.7256391Z [0m LocalFileClientService: Unable to list files for: credential, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/credential'
+2023-07-27T17:25:14.7256840Z [0m LocalFileClientService: Unable to list files for: adfcdc, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/adfcdc'
+2023-07-27T17:25:14.7257316Z [0m LocalFileClientService: Unable to list files for: managedVirtualNetwork, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/managedVirtualNetwork'
+2023-07-27T17:25:14.7258187Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7259183Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7259614Z [0m CmdApiApp: App initialized.
+2023-07-27T17:25:14.7259885Z [0m BaseFileResourceProviderService: populateAllResources - downloaded git resources
+2023-07-27T17:25:14.7260181Z [0m BaseFileResourceProviderService: populateAllResources - loaded last version id
+2023-07-27T17:25:14.7260456Z [0m BaseFileResourceProviderService: populateAllResources - finished
+2023-07-27T17:25:14.7260699Z [0m ModelService: fetchAllInBackground - start
+2023-07-27T17:25:14.7260899Z [0m ModelService: synchronize - finished
+2023-07-27T17:25:14.7261267Z [0m ModelService: _backgroundFetch - finished, duration: 113.31359100004192, total nameds: 13
+2023-07-27T17:25:14.7261560Z [0m ModelService: _backgroundFetch - finished, total unknown model types
+2023-07-27T17:25:14.7261800Z [0m CmdApiApp: Publishable resource count: 12
+2023-07-27T17:25:14.7262016Z [0m CmdApiApp: Starting to validate all resources
+2023-07-27T17:25:14.7262275Z [0m Validator: Start validation for: pipeline - pl_copy_population_access_key
+2023-07-27T17:25:14.7262559Z [0m Validator: Start validation for: pipeline - pl_copy_population_data
+2023-07-27T17:25:14.7262807Z [0m Validator: Start validation for: pipeline - pl_pipeline3
+2023-07-27T17:25:14.7263066Z [0m Validator: Start validation for: pipeline - pl_pipeline_1
+2023-07-27T17:25:14.7263338Z [0m Validator: Start validation for: dataset - ds_population_source_access_key
+2023-07-27T17:25:14.7264495Z [0m Validator: Start validation for: dataset - ds_sink_population
+2023-07-27T17:25:14.7264812Z [0m Validator: Start validation for: dataset - ds_sink_population_access_key
+2023-07-27T17:25:14.7265077Z [0m Validator: Start validation for: dataset - ds_source_population
+2023-07-27T17:25:14.7265372Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_accesskey_keyvault
+2023-07-27T17:25:14.7265662Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_managed_identity
+2023-07-27T17:25:14.7265939Z [0m Validator: Start validation for: linkedService - ls_devcicdkv
+2023-07-27T17:25:14.7266176Z [0m Validator: Start validation for: trigger - trigger_1
+2023-07-27T17:25:14.7266360Z [0m CmdApiApp: 
+2023-07-27T17:25:14.7266486Z Validation finished. No errors found.
+2023-07-27T17:25:14.7266703Z [0m ArmTemplateGeneratorService: Generating templates
+2023-07-27T17:25:14.7267073Z [0m ArmTemplateGeneratorService: Checking if dataflows need parsing.
+2023-07-27T17:25:14.7267360Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7267638Z [0m ArmTemplateGeneratorService: Dataflows need parsing: false
+2023-07-27T17:25:14.7268546Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/arm-template-parameters-definition.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7269772Z [33m WARNING === ArmTemplateUtils: _getUserParameterDefinitionJson - Unable to load custom param file from repo, will use default file. Error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7270366Z [0m ArmTemplateGeneratorService: Generating full template
+2023-07-27T17:25:14.7270642Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7271692Z [0m ArmTemplateGeneratorService: Generating full template parameters file
+2023-07-27T17:25:14.7271965Z [0m ArmTemplateGeneratorService: Generating Linked Templates
+2023-07-27T17:25:14.7272242Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7273143Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/arm-template-parameters-definition.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7274451Z [33m WARNING === ArmTemplateUtils: _getUserParameterDefinitionJson - Unable to load custom param file from repo, will use default file. Error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7275174Z [0m ArmTemplateGeneratorService: Building master arm template and parameters file
+2023-07-27T17:25:14.7275484Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7275799Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/ARMTemplateForFactory.json
+2023-07-27T17:25:14.7276130Z [0m LocalFileUtils: Dir: /home/vsts/work/1/s/build/ArmTemplate does not exist, creating it....
+2023-07-27T17:25:14.7276353Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7276648Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/ARMTemplateParametersForFactory.json
+2023-07-27T17:25:14.7276892Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7277182Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplate_0.json
+2023-07-27T17:25:14.7277540Z [0m LocalFileUtils: Dir: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates does not exist, creating it....
+2023-07-27T17:25:14.7277770Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7278083Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplate_master.json
+2023-07-27T17:25:14.7278395Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7278721Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplateParameters_master.json
+2023-07-27T17:25:14.7278964Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7279181Z [0m CmdApiApp: ARM template generated. Writing files...
+2023-07-27T17:25:14.7279458Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:14.7280222Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7281211Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7281762Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/PrePostDeploymentScript.ps1
+2023-07-27T17:25:14.7281988Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7282275Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/GlobalParametersUpdateScript.ps1
+2023-07-27T17:25:14.7282515Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7282816Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/dev-cicd-adf-00619_GlobalParameters.json
+2023-07-27T17:25:14.7283063Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7283276Z [0m CmdApiApp: ARM template export finished successfully.
+2023-07-27T17:25:14.7283359Z 
+2023-07-27T17:25:14.7283482Z Execution finished....
+2023-07-27T17:25:14.7292765Z ##[section]Finishing: Generate ARM template
+2023-07-27T17:25:14.7303573Z ##[section]Starting: Publish ARM tempate
+2023-07-27T17:25:14.7307451Z ==============================================================================
+2023-07-27T17:25:14.7307562Z Task         : Publish Pipeline Artifacts
+2023-07-27T17:25:14.7307626Z Description  : Publish (upload) a file or directory as a named artifact for the current run
+2023-07-27T17:25:14.7307725Z Version      : 1.199.0
+2023-07-27T17:25:14.7307795Z Author       : Microsoft Corporation
+2023-07-27T17:25:14.7307858Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact
+2023-07-27T17:25:14.7307964Z ==============================================================================
+2023-07-27T17:25:15.0574708Z Artifact name input: ArmTemplates
+2023-07-27T17:25:15.0680972Z Uploading pipeline artifact from /home/vsts/work/1/s/build/ArmTemplate for build #8
+2023-07-27T17:25:15.1083002Z Using default max parallelism.
+2023-07-27T17:25:15.1104083Z Max dedup parallelism: 192
+2023-07-27T17:25:16.0186153Z ApplicationInsightsTelemetrySender will correlate events with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:16.0191774Z Hashtype: Dedup64K
+2023-07-27T17:25:16.0396632Z DedupManifestArtifactClient will correlate http requests with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:16.1494049Z 8 files processed.
+2023-07-27T17:25:16.1502474Z Processed 8 files from /home/vsts/work/1/s/build/ArmTemplate successfully.
+2023-07-27T17:25:17.3339258Z Uploaded 37,217 out of 89,179 bytes
+2023-07-27T17:25:17.3340097Z Content upload is done!
+2023-07-27T17:25:17.3355987Z 
+2023-07-27T17:25:17.3356342Z Content upload statistics:
+2023-07-27T17:25:17.3356571Z Total Content: 0.2 MB
+2023-07-27T17:25:17.3356724Z Physical Content Uploaded: 5.7 KB
+2023-07-27T17:25:17.3356910Z Logical Content Uploaded: 37.2 KB
+2023-07-27T17:25:17.3357061Z Compression Saved: 31.5 KB
+2023-07-27T17:25:17.3359274Z Deduplication Saved: 0.1 MB
+2023-07-27T17:25:17.3359429Z Number of Chunks Uploaded: 3
+2023-07-27T17:25:17.3359587Z Total Number of Chunks: 17
+2023-07-27T17:25:17.3359652Z 
+2023-07-27T17:25:18.2028096Z Associated artifact 8 with build 8
+2023-07-27T17:25:18.2057337Z ApplicationInsightsTelemetrySender correlated 2 events with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:18.2064272Z Uploading pipeline artifact finished.
+2023-07-27T17:25:18.2185240Z ##[section]Finishing: Publish ARM tempate
+2023-07-27T17:25:18.2198710Z ##[section]Starting: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:25:18.2201397Z ==============================================================================
+2023-07-27T17:25:18.2201513Z Task         : Get sources
+2023-07-27T17:25:18.2201583Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2023-07-27T17:25:18.2201684Z Version      : 1.0.0
+2023-07-27T17:25:18.2201736Z Author       : Microsoft
+2023-07-27T17:25:18.2201816Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2023-07-27T17:25:18.2201906Z ==============================================================================
+2023-07-27T17:25:18.5318286Z Cleaning any cached credential from repository: dev-cicd-adf-00619 (Git)
+2023-07-27T17:25:18.5423563Z ##[section]Finishing: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:25:18.5524992Z ##[section]Starting: Finalize Job
+2023-07-27T17:25:18.5555361Z Cleaning up task key
+2023-07-27T17:25:18.5556231Z Start cleaning up orphan processes.
+2023-07-27T17:25:18.6009611Z ##[section]Finishing: Finalize Job
+2023-07-27T17:25:18.6071143Z ##[section]Finishing: Job

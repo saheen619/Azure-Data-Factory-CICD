@@ -1,0 +1,33 @@
+2023-07-27T17:25:14.7303564Z ##[section]Starting: Publish ARM tempate
+2023-07-27T17:25:14.7307442Z ==============================================================================
+2023-07-27T17:25:14.7307559Z Task         : Publish Pipeline Artifacts
+2023-07-27T17:25:14.7307623Z Description  : Publish (upload) a file or directory as a named artifact for the current run
+2023-07-27T17:25:14.7307722Z Version      : 1.199.0
+2023-07-27T17:25:14.7307792Z Author       : Microsoft Corporation
+2023-07-27T17:25:14.7307854Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/publish-pipeline-artifact
+2023-07-27T17:25:14.7307960Z ==============================================================================
+2023-07-27T17:25:15.0574679Z Artifact name input: ArmTemplates
+2023-07-27T17:25:15.0680947Z Uploading pipeline artifact from /home/vsts/work/1/s/build/ArmTemplate for build #8
+2023-07-27T17:25:15.1082962Z Using default max parallelism.
+2023-07-27T17:25:15.1104021Z Max dedup parallelism: 192
+2023-07-27T17:25:16.0185998Z ApplicationInsightsTelemetrySender will correlate events with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:16.0191767Z Hashtype: Dedup64K
+2023-07-27T17:25:16.0396586Z DedupManifestArtifactClient will correlate http requests with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:16.1493996Z 8 files processed.
+2023-07-27T17:25:16.1502432Z Processed 8 files from /home/vsts/work/1/s/build/ArmTemplate successfully.
+2023-07-27T17:25:17.3339219Z Uploaded 37,217 out of 89,179 bytes
+2023-07-27T17:25:17.3340062Z Content upload is done!
+2023-07-27T17:25:17.3355964Z 
+2023-07-27T17:25:17.3356337Z Content upload statistics:
+2023-07-27T17:25:17.3356567Z Total Content: 0.2 MB
+2023-07-27T17:25:17.3356717Z Physical Content Uploaded: 5.7 KB
+2023-07-27T17:25:17.3356907Z Logical Content Uploaded: 37.2 KB
+2023-07-27T17:25:17.3357055Z Compression Saved: 31.5 KB
+2023-07-27T17:25:17.3359269Z Deduplication Saved: 0.1 MB
+2023-07-27T17:25:17.3359416Z Number of Chunks Uploaded: 3
+2023-07-27T17:25:17.3359584Z Total Number of Chunks: 17
+2023-07-27T17:25:17.3359648Z 
+2023-07-27T17:25:18.2028061Z Associated artifact 8 with build 8
+2023-07-27T17:25:18.2057317Z ApplicationInsightsTelemetrySender correlated 2 events with X-TFS-Session 2ef9b018-71cb-4fbd-8a6a-ce9eba7804b5
+2023-07-27T17:25:18.2064251Z Uploading pipeline artifact finished.
+2023-07-27T17:25:18.2185226Z ##[section]Finishing: Publish ARM tempate

@@ -1,0 +1,64 @@
+2023-07-27T17:24:56.4478968Z ##[section]Starting: Checkout dev-cicd-adf-00619@main to s
+2023-07-27T17:24:56.4687627Z ==============================================================================
+2023-07-27T17:24:56.4688244Z Task         : Get sources
+2023-07-27T17:24:56.4688499Z Description  : Get sources from a repository. Supports Git, TfsVC, and SVN repositories.
+2023-07-27T17:24:56.4688667Z Version      : 1.0.0
+2023-07-27T17:24:56.4688898Z Author       : Microsoft
+2023-07-27T17:24:56.4689234Z Help         : [More Information](https://go.microsoft.com/fwlink/?LinkId=798199)
+2023-07-27T17:24:56.4689363Z ==============================================================================
+2023-07-27T17:24:56.9753630Z Syncing repository: dev-cicd-adf-00619 (Git)
+2023-07-27T17:24:57.0264113Z ##[command]git version
+2023-07-27T17:24:57.0962677Z git version 2.41.0
+2023-07-27T17:24:57.0987448Z ##[command]git lfs version
+2023-07-27T17:24:57.1519192Z git-lfs/3.3.0 (GitHub; linux amd64; go 1.19.3)
+2023-07-27T17:24:57.1699533Z ##[command]git init "/home/vsts/work/1/s"
+2023-07-27T17:24:57.1773977Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-07-27T17:24:57.1774314Z hint: is subject to change. To configure the initial branch name to use in all
+2023-07-27T17:24:57.1774597Z hint: of your new repositories, which will suppress this warning, call:
+2023-07-27T17:24:57.1774746Z hint: 
+2023-07-27T17:24:57.1774966Z hint: 	git config --global init.defaultBranch <name>
+2023-07-27T17:24:57.1775420Z hint: 
+2023-07-27T17:24:57.1775657Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-07-27T17:24:57.1775967Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-07-27T17:24:57.1776121Z hint: 
+2023-07-27T17:24:57.1776279Z hint: 	git branch -m <name>
+2023-07-27T17:24:57.1793196Z Initialized empty Git repository in /home/vsts/work/1/s/.git/
+2023-07-27T17:24:57.1811123Z ##[command]git remote add origin https://saheendecathlon@dev.azure.com/saheendecathlon/Azure%AZP2520Data%AZP2520Factory%AZP2520CI%AZP2520CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.1874414Z ##[command]git config gc.auto 0
+2023-07-27T17:24:57.1917414Z ##[command]git config --get-all http.https://saheendecathlon@dev.azure.com/saheendecathlon/Azure%AZP2520Data%AZP2520Factory%AZP2520CI%AZP2520CD/_git/dev-cicd-adf-00619.extraheader
+2023-07-27T17:24:57.1960321Z ##[command]git config --get-all http.extraheader
+2023-07-27T17:24:57.2045547Z ##[command]git config --get-regexp .*extraheader
+2023-07-27T17:24:57.2049523Z ##[command]git config --get-all http.proxy
+2023-07-27T17:24:57.2074447Z ##[command]git config http.version HTTP/1.1
+2023-07-27T17:24:57.2248713Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +1e5b8757aea590a4e018306e93e5aca0d8cf25c3:refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.4025025Z remote: Azure Repos        
+2023-07-27T17:24:57.4036456Z remote: 
+2023-07-27T17:24:57.4042803Z remote: Found 26 objects to send. (0 ms)        
+2023-07-27T17:24:57.4137443Z From https://dev.azure.com/saheendecathlon/Azure%20Data%20Factory%20CI%20CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.4141517Z  * [new ref]         1e5b8757aea590a4e018306e93e5aca0d8cf25c3 -> origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.4720900Z ##[command]git --config-env=http.extraheader=env_var_http.extraheader fetch --force --tags --prune --prune-tags --progress --no-recurse-submodules origin --depth=1 +1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.6016660Z remote: Azure Repos        
+2023-07-27T17:24:57.6017217Z remote: 
+2023-07-27T17:24:57.6029238Z remote: Found 0 objects to send. (0 ms)        
+2023-07-27T17:24:57.6117981Z From https://dev.azure.com/saheendecathlon/Azure%20Data%20Factory%20CI%20CD/_git/dev-cicd-adf-00619
+2023-07-27T17:24:57.6120585Z  * branch            1e5b8757aea590a4e018306e93e5aca0d8cf25c3 -> FETCH_HEAD
+2023-07-27T17:24:57.6643875Z ##[command]git checkout --progress --force refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3
+2023-07-27T17:24:57.6650641Z Note: switching to 'refs/remotes/origin/1e5b8757aea590a4e018306e93e5aca0d8cf25c3'.
+2023-07-27T17:24:57.6650761Z 
+2023-07-27T17:24:57.6651109Z You are in 'detached HEAD' state. You can look around, make experimental
+2023-07-27T17:24:57.6651331Z changes and commit them, and you can discard any commits you make in this
+2023-07-27T17:24:57.6651548Z state without impacting any branches by switching back to a branch.
+2023-07-27T17:24:57.6651636Z 
+2023-07-27T17:24:57.6651796Z If you want to create a new branch to retain commits you create, you may
+2023-07-27T17:24:57.6652061Z do so (now or later) by using -c with the switch command. Example:
+2023-07-27T17:24:57.6652149Z 
+2023-07-27T17:24:57.6652326Z   git switch -c <new-branch-name>
+2023-07-27T17:24:57.6652392Z 
+2023-07-27T17:24:57.6652506Z Or undo this operation with:
+2023-07-27T17:24:57.6652568Z 
+2023-07-27T17:24:57.6652683Z   git switch -
+2023-07-27T17:24:57.6652737Z 
+2023-07-27T17:24:57.6652894Z Turn off this advice by setting config variable advice.detachedHead to false
+2023-07-27T17:24:57.6652989Z 
+2023-07-27T17:24:57.6653163Z HEAD is now at 1e5b875 Merged PR 16: Updating pipeline: pl_copy_population_access_key
+2023-07-27T17:24:57.6707350Z ##[section]Finishing: Checkout dev-cicd-adf-00619@main to s

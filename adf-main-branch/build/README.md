@@ -1,0 +1,1 @@
+This dir stores all files required for build pipeline

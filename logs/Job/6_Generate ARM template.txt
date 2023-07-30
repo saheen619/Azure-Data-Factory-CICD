@@ -1,0 +1,133 @@
+2023-07-27T17:25:09.0116502Z ##[section]Starting: Generate ARM template
+2023-07-27T17:25:09.0120795Z ==============================================================================
+2023-07-27T17:25:09.0120923Z Task         : npm
+2023-07-27T17:25:09.0120973Z Description  : Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+2023-07-27T17:25:09.0121122Z Version      : 1.221.0
+2023-07-27T17:25:09.0121176Z Author       : Microsoft Corporation
+2023-07-27T17:25:09.0121250Z Help         : https://docs.microsoft.com/azure/devops/pipelines/tasks/package/npm
+2023-07-27T17:25:09.0121342Z ==============================================================================
+2023-07-27T17:25:09.5645260Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm --version
+2023-07-27T17:25:09.7315892Z 6.14.18
+2023-07-27T17:25:10.1002129Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm config list
+2023-07-27T17:25:10.2789334Z ; cli configs
+2023-07-27T17:25:10.2790222Z metrics-registry = "https://registry.npmjs.org/"
+2023-07-27T17:25:10.2790742Z scope = ""
+2023-07-27T17:25:10.2791932Z user-agent = "npm/6.14.18 node/v14.21.3 linux x64"
+2023-07-27T17:25:10.2792166Z 
+2023-07-27T17:25:10.2792569Z ; environment configs
+2023-07-27T17:25:10.2792900Z userconfig = "/home/vsts/work/1/npm/8.npmrc"
+2023-07-27T17:25:10.2793281Z 
+2023-07-27T17:25:10.2793690Z ; node bin location = /opt/hostedtoolcache/node/14.21.3/x64/bin/node
+2023-07-27T17:25:10.2794050Z ; cwd = /home/vsts/work/1/s/build
+2023-07-27T17:25:10.2794302Z ; HOME = /home/vsts
+2023-07-27T17:25:10.2794671Z ; "npm config ls -l" to show all defaults.
+2023-07-27T17:25:10.2794911Z 
+2023-07-27T17:25:10.2800749Z [command]/opt/hostedtoolcache/node/14.21.3/x64/bin/npm run build export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate
+2023-07-27T17:25:14.7187491Z 
+2023-07-27T17:25:14.7188404Z > @ build /home/vsts/work/1/s/build
+2023-07-27T17:25:14.7189418Z > node node_modules/@microsoft/azure-data-factory-utilities/lib/index "export" "/home/vsts/work/1/s/" "/subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619" "ArmTemplate"
+2023-07-27T17:25:14.7189876Z 
+2023-07-27T17:25:14.7190261Z Downloading bundle from: https://adf.azure.com/assets/cmd-api/main.js
+2023-07-27T17:25:14.7190745Z Process cwd: /home/vsts/work/1/s/build
+2023-07-27T17:25:14.7192401Z Bundle downloaded successfully, saved in: /home/vsts/work/1/s/build/downloads/main.js
+2023-07-27T17:25:14.7192685Z Executing bundle...
+2023-07-27T17:25:14.7193267Z Inserting the following arguments: export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate
+2023-07-27T17:25:14.7193637Z Executing bundle file, full command:
+2023-07-27T17:25:14.7193779Z 
+2023-07-27T17:25:14.7247468Z node  /home/vsts/work/1/s/build/downloads/main.js export /home/vsts/work/1/s/ /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619 ArmTemplate 
+2023-07-27T17:25:14.7247764Z 
+2023-07-27T17:25:14.7247804Z 
+2023-07-27T17:25:14.7247998Z [0m CmdApiApp: Initializing application.
+2023-07-27T17:25:14.7248386Z Resource: /subscriptions/69a25f64-c0a0-41c5-9cc0-78818b0f2935/resourceGroups/dev-cicd-rg/providers/Microsoft.DataFactory/factories/dev-cicd-adf-00619
+2023-07-27T17:25:14.7248621Z RootFolder: /home/vsts/work/1/s/
+2023-07-27T17:25:14.7248807Z [0m ModelService: synchronize - start
+2023-07-27T17:25:14.7249077Z [0m ModelService: Dynamic connector - Start registering dynamic connectors
+2023-07-27T17:25:14.7249374Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Dataworld
+2023-07-27T17:25:14.7249681Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Dataworld
+2023-07-27T17:25:14.7250733Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Asana
+2023-07-27T17:25:14.7251031Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Asana
+2023-07-27T17:25:14.7251344Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: Twilio
+2023-07-27T17:25:14.7251642Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: Twilio
+2023-07-27T17:25:14.7251958Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: AppFigures
+2023-07-27T17:25:14.7252268Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: AppFigures
+2023-07-27T17:25:14.7252586Z [0m DynamicConnectorService: Dynamic connector - Start registering connector: GoogleSheets
+2023-07-27T17:25:14.7252917Z [0m DynamicConnectorService: Dynamic connector - Finished registering connector: GoogleSheets
+2023-07-27T17:25:14.7253169Z [0m CmdApiApp: Initializing resource registries...
+2023-07-27T17:25:14.7253398Z [0m CmdApiApp: Initializing model service...
+2023-07-27T17:25:14.7253653Z [0m ModelService: Dynamic connector - Finished registering dynamic connectors
+2023-07-27T17:25:14.7253930Z [0m BaseFileResourceProviderService: populateAllResources - start
+2023-07-27T17:25:14.7254169Z [0m CmdApiApp: Initializing publish config service...
+2023-07-27T17:25:14.7254432Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:14.7254867Z [0m LocalFileClientService: Unable to list files for: integrationRuntime, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/integrationRuntime'
+2023-07-27T17:25:14.7255494Z [0m LocalFileClientService: Unable to list files for: factory, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/factory'
+2023-07-27T17:25:14.7255941Z [0m LocalFileClientService: Unable to list files for: dataflow, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/dataflow'
+2023-07-27T17:25:14.7256386Z [0m LocalFileClientService: Unable to list files for: credential, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/credential'
+2023-07-27T17:25:14.7256836Z [0m LocalFileClientService: Unable to list files for: adfcdc, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/adfcdc'
+2023-07-27T17:25:14.7257311Z [0m LocalFileClientService: Unable to list files for: managedVirtualNetwork, error: Error: ENOENT: no such file or directory, scandir '/home/vsts/work/1/s/managedVirtualNetwork'
+2023-07-27T17:25:14.7258181Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7259162Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7259610Z [0m CmdApiApp: App initialized.
+2023-07-27T17:25:14.7259882Z [0m BaseFileResourceProviderService: populateAllResources - downloaded git resources
+2023-07-27T17:25:14.7260177Z [0m BaseFileResourceProviderService: populateAllResources - loaded last version id
+2023-07-27T17:25:14.7260452Z [0m BaseFileResourceProviderService: populateAllResources - finished
+2023-07-27T17:25:14.7260695Z [0m ModelService: fetchAllInBackground - start
+2023-07-27T17:25:14.7260895Z [0m ModelService: synchronize - finished
+2023-07-27T17:25:14.7261195Z [0m ModelService: _backgroundFetch - finished, duration: 113.31359100004192, total nameds: 13
+2023-07-27T17:25:14.7261557Z [0m ModelService: _backgroundFetch - finished, total unknown model types
+2023-07-27T17:25:14.7261797Z [0m CmdApiApp: Publishable resource count: 12
+2023-07-27T17:25:14.7262012Z [0m CmdApiApp: Starting to validate all resources
+2023-07-27T17:25:14.7262271Z [0m Validator: Start validation for: pipeline - pl_copy_population_access_key
+2023-07-27T17:25:14.7262555Z [0m Validator: Start validation for: pipeline - pl_copy_population_data
+2023-07-27T17:25:14.7262804Z [0m Validator: Start validation for: pipeline - pl_pipeline3
+2023-07-27T17:25:14.7263062Z [0m Validator: Start validation for: pipeline - pl_pipeline_1
+2023-07-27T17:25:14.7263335Z [0m Validator: Start validation for: dataset - ds_population_source_access_key
+2023-07-27T17:25:14.7264454Z [0m Validator: Start validation for: dataset - ds_sink_population
+2023-07-27T17:25:14.7264792Z [0m Validator: Start validation for: dataset - ds_sink_population_access_key
+2023-07-27T17:25:14.7265074Z [0m Validator: Start validation for: dataset - ds_source_population
+2023-07-27T17:25:14.7265368Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_accesskey_keyvault
+2023-07-27T17:25:14.7265658Z [0m Validator: Start validation for: linkedService - ls_cicd_dl_managed_identity
+2023-07-27T17:25:14.7265935Z [0m Validator: Start validation for: linkedService - ls_devcicdkv
+2023-07-27T17:25:14.7266173Z [0m Validator: Start validation for: trigger - trigger_1
+2023-07-27T17:25:14.7266343Z [0m CmdApiApp: 
+2023-07-27T17:25:14.7266483Z Validation finished. No errors found.
+2023-07-27T17:25:14.7266699Z [0m ArmTemplateGeneratorService: Generating templates
+2023-07-27T17:25:14.7267069Z [0m ArmTemplateGeneratorService: Checking if dataflows need parsing.
+2023-07-27T17:25:14.7267356Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7267634Z [0m ArmTemplateGeneratorService: Dataflows need parsing: false
+2023-07-27T17:25:14.7268537Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/arm-template-parameters-definition.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7269766Z [33m WARNING === ArmTemplateUtils: _getUserParameterDefinitionJson - Unable to load custom param file from repo, will use default file. Error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7270359Z [0m ArmTemplateGeneratorService: Generating full template
+2023-07-27T17:25:14.7270638Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7271685Z [0m ArmTemplateGeneratorService: Generating full template parameters file
+2023-07-27T17:25:14.7271961Z [0m ArmTemplateGeneratorService: Generating Linked Templates
+2023-07-27T17:25:14.7272238Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7273137Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/arm-template-parameters-definition.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7274352Z [33m WARNING === ArmTemplateUtils: _getUserParameterDefinitionJson - Unable to load custom param file from repo, will use default file. Error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/arm-template-parameters-definition.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/arm-template-parameters-definition.json"}
+2023-07-27T17:25:14.7275169Z [0m ArmTemplateGeneratorService: Building master arm template and parameters file
+2023-07-27T17:25:14.7275480Z [0m ModelService: fetchAll - start. Fetch named count: 12, total resource count: 12
+2023-07-27T17:25:14.7275795Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/ARMTemplateForFactory.json
+2023-07-27T17:25:14.7276125Z [0m LocalFileUtils: Dir: /home/vsts/work/1/s/build/ArmTemplate does not exist, creating it....
+2023-07-27T17:25:14.7276346Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7276643Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/ARMTemplateParametersForFactory.json
+2023-07-27T17:25:14.7276889Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7277179Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplate_0.json
+2023-07-27T17:25:14.7277536Z [0m LocalFileUtils: Dir: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates does not exist, creating it....
+2023-07-27T17:25:14.7277767Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7278079Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplate_master.json
+2023-07-27T17:25:14.7278391Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7278703Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/linkedTemplates/ArmTemplateParameters_master.json
+2023-07-27T17:25:14.7278961Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7279174Z [0m CmdApiApp: ARM template generated. Writing files...
+2023-07-27T17:25:14.7279454Z [0m PublishConfigService: _getLatestPublishConfig - retrieving config file.
+2023-07-27T17:25:14.7280217Z [33m WARNING === LocalFileClientService: Unable to read file: /home/vsts/work/1/s/publish_config.json, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7281206Z [31m ERROR === PublishConfigService: _getLatestPublishConfig - Unable to process publish config file, error: {"stack":"Error: ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","message":"ENOENT: no such file or directory, open '/home/vsts/work/1/s/publish_config.json'","errno":-2,"code":"ENOENT","syscall":"open","path":"/home/vsts/work/1/s/publish_config.json"}
+2023-07-27T17:25:14.7281755Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/PrePostDeploymentScript.ps1
+2023-07-27T17:25:14.7281985Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7282271Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/GlobalParametersUpdateScript.ps1
+2023-07-27T17:25:14.7282511Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7282812Z [0m LocalFileUtils: Saving file: /home/vsts/work/1/s/build/ArmTemplate/dev-cicd-adf-00619_GlobalParameters.json
+2023-07-27T17:25:14.7283059Z [0m LocalFileUtils: File saved.
+2023-07-27T17:25:14.7283273Z [0m CmdApiApp: ARM template export finished successfully.
+2023-07-27T17:25:14.7283355Z 
+2023-07-27T17:25:14.7283479Z Execution finished....
+2023-07-27T17:25:14.7292755Z ##[section]Finishing: Generate ARM template
